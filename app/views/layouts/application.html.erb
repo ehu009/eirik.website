@@ -14,10 +14,31 @@
 
     <!-- Latest compiled JavaScript for Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript">
+      
+      function activateDefaultNavbarItem() {
+        document.getElementById('about-nav-btn').classList.add('active');
+      }
+
+      function clearActiveNavBarItems() {
+        let c = document.getElementsByClassName('nav-link');
+        for (let e of c) {
+          e.classList.remove('active');
+        }
+      }
+
+      function setActiveNavbarItemTo(id) {
+        clearActiveNavBarItems();
+        document.getElementById(id).classList.add('active');
+      }
+
+    </script>
   </head>
 
-  <body>
+  <body onload="activateDefaultNavbarItem();">
     <%= render 'navbar' %>
     <%= yield %>
+
   </body>
 </html>
