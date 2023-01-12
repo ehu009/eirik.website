@@ -1,0 +1,45 @@
+<p>
+    <div class="container-fluid row">
+        <div class="col-2">
+        </div>
+        <div class="col-8">
+            <div class="card">
+                <div class="card-header bg-secondary text-white">
+                    <%= card_title %>
+                </div>
+
+                <div class="card-body">
+                    <div class="container-fluid row">
+                        <% img = nil %>
+                        <% begin %>
+                            <% img = img_url %>
+                        <% rescue %>
+                        <div class="col-2">
+                        </div>
+                        <div class="col-9">
+                        <% else %>
+                        <div class="col-3">
+                            <img class="img-fluid mx-auto d-block rounded" src="<%= img %>" style="width=100%"/>
+                        </div>
+                        <div class="col-8">
+                        <% end %>
+                        
+                        <%= yield %>
+                        </div>
+                        <div class="col-1">
+                        </div>
+                    </div>
+                    
+                    <p style="text-align: center;">
+                        <a href="<%= card_link_url %>">
+                            <%= card_link_text %>
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-2">
+        </div>
+    </div>
+</p>
