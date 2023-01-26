@@ -29,10 +29,17 @@
                         <div class="col-1">
                         </div>
                     </div>
-                    
+
                     <p style="text-align: center;">
-                        <a href="<%= card_link_url %>">
+                        <% if card_link_url == '' or card_link_url == nil then %>
+                        <a class="class-link">
+                            <s>
+                                <%= card_link_text %>
+                            </s>
+                        <% else %>
+                        <a href="<%= card_link_url %>" class="class-link">
                             <%= card_link_text %>
+                        <% end %>
                         </a>
                     </p>
                 </div>
