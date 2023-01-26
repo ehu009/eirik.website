@@ -1,2 +1,122 @@
 
 <%= render 'projects/intro' %>
+
+
+
+<%= render 'projects/card', card_title: 'Fizzbuzz ASM', img_url: 'fizzbuzz.png', card_link_url: 'https://github.com/ehu009/fizzbuzz-asm', card_link_text: 'Assembly Fizzbuzz on GitHub' do %>
+<p>
+You know Fizzbuzz.
+</p>
+<p>
+I made it because I was bored - besides that, employers apparently enjoy these kind of programming tasks.
+<br/>
+I wrote it for the IA32 processor family assembly using GNU/GAS syntax. I spent about a day writing the code, then another day making the code look somewhat pretty.
+</p>
+<% end %>
+
+<%= render 'projects/card', img_url: 'd20maker.png', card_title: 'd20-maker', card_link_url: 'https://github.com/ehu009/d20-maker', card_link_text: 'd20maker on GitHub' do %>
+<p>
+This program lets the user plop down a bunch of right-angled triangles so that they constitute a icosahedron net.
+<br/>
+In other words, it creates a shape that is guaranteed to fold into a twenty-sided die. Once the shape has been completed, the user can set the transparency of the triangle outlines, in case e.g. folding lines are not wanted.
+<br/>
+</p>
+<p>
+The program is written in C, and uses SDL2 as development library. All the code, including ADT for UI elements and line drawing, was written by me.
+<br/>
+Basic functionality has been implemented, but I am still working on some extra features.
+</p>
+<% end %>
+
+
+<%= render 'projects/card', card_title: 'Fifteen shades of grey AKA Sliderman', card_link_text: 'Unavailable', card_link_url: nil do %>
+<p>
+A basic puzzle game with sliding tiles.
+<br/>
+Bundled with the game is an encrypted mp3 file, decrypted upon game completion, as a kind of reward.
+</p>
+<p>
+The game tiles were all black and white, and had to be sorted on a 4x4 board.
+<br/>
+Only two ways to solve the puzzle were implemented, although others exist.
+</p>
+<p>
+The game was written in C, using SDL2.<br/>
+If I manage to recover the source code, I will implement the other puzzle solutions - and make the source code available on GitHub, of course.
+</p>
+<% end %>
+
+<%= render 'projects/card', card_title: 'Train4Aid', card_link_url: nil, card_link_text: 'Unavailable' do %>
+<p>
+Train4Aid was my first paid project.
+<br/>
+The customer wanted a website opening their model train set to the public - by donating to Unicef, visitors were able to select and start up one of the trains, and watch a live stream of the train whizzing around the track.
+<br/>
+All source code was written by me.
+</p>
+
+<p>
+The framework used for the project was Ruby on Rails. Trains were controlled and monitored by communicating with IoT relays via a REST API.
+<br/>
+If a train failed to start, for whatever reason, this would be detected using magnetic sensors along the track. The user would then receive a new ticket, and the webmaster would receive an email regarding the issue - the train would be put out of comission until the issue had been resolved. 
+<br/>
+Failure usually occured if a train was slightly misaligned with the track.
+</p>
+
+<p>
+The website was finished in the spring of 2019.
+<br/>
+The customer is currently too busy with other things to develop this project any further, and the website has been shut down.
+<br/>
+The source code has been made unavailable on GitHub as per customer request.
+</p>
+<% end %>
+
+<%= render 'projects/card', card_title: 'warp.world-clone.net', card_link_url: 'https://github.com/ehu009/warp.world-clone', card_link_text: 'warp.world-clone on GitHub' do %>
+<p>
+This website was mean to be used as a helpful tool specifically for streamers on YouTube or Twitch playing Mario Maker 2.
+<br/>
+Streamers could create a page for themselves, with a custom URL, which would then provide chat bot intergration - allowing stream viewers to add their level codes to the streamer's level queue.
+<br/>
+This level queue could then be manipulated by the streamer, and time spent on a level could be monitored.
+</p>
+<p>
+This project, made using Ruby on Rails, started a few weeks after Mario Maker 2 was released. Another webpage, <a href="https://warp.world/">Warp World</a>, already provided this functionality for the previous game, but did not yet support the newer release - which is how this project came into being.
+<br/>
+I managed to get a handful of streamers to use it - once Warp World had implemented support for the newer game, there was no longer need for my solution, and the website was shut down.
+<br/>
+</p>
+<p>
+Written using Ruby on Rails.
+</p>
+<% end %>
+
+<%= render 'projects/card', card_title: 'Frontend for private Minecraft server', card_link_url: nil, card_link_text: 'Unavailable' do %>
+<p>
+I began this project back when I would stream Minecraft on YouTube and Twitch, and had my own private server.
+</p>
+
+<p>
+The inspiration for the project came to me when I found some software for Linux that could generate an interactive map from Minecraft game files.
+<br/>
+The interactive maps used <a href="https://leafletjs.com/">Leaflet</a> and were quite configurable and easy to manipulate. The map would be automatically updated (generated anew) once every two days thanks to a custom daemon I wrote.
+<br/>
+Additionally, users could visit the webpage to see which other players were online at the moment, and get a link to their in-game skin via <a href="https://namemc.com/">NameMC</a>.
+</p>
+
+<p>
+I started implementing a paywall for new users, but eventually ditched the project as I grew tired of playing the game.
+<br/>
+The source code, webpage and game server is unreachable. The source code is possibly lost forever.
+</p>
+
+<p>
+Written using Ruby on Rails.
+</p>
+<% end %>
+
+<%= render 'projects/card', card_title: 'Server tools for private WoW server', card_link_url: nil, card_link_text: '' do %>
+<h4>
+to be done
+</h4>
+<% end %>
